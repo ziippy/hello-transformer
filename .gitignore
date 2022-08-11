@@ -4,3 +4,6 @@ __pycache__
 */__pycache__/*
 venv
 */venv/*
+*.bin
+*.zip
+cola_public_1_1
