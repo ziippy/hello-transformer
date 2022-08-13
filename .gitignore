@@ -7,3 +7,6 @@ venv
 *.bin
 *.zip
 cola_public_1_1
+squad
+outputs
+
