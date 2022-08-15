@@ -127,3 +127,19 @@ RTD 에서는 모든 토큰이 학습 대상이 됨 (fake or real) -> 하나의 
 
 ### DistilBERT
 
+지금까지 설명한 BERT 기반 모델의 크기도 굉장히 커졌다. -> 자연스럽게 연산량 증가 -> 지연 시간이 길어짐
+
+가벼운 모델을 만들어보기 위한 경량화에 대한 연구도 활발하게 진행
+- 양자화 (Quantization)
+- 가지치기 (Pruning)
+- 지식 증류 (Knowledge Distillation)
+
+DistilBERT 는 BERT 를 지식 증류 기법으로 경량화한 모델
+
+<img src="images/지식_증류_시_사용하는_목적_함수.png">
+
+BERT 와 비교했을 때 파라미터 수도 2배 정도 적고, 속도는 2배 정도 빠르다.
+
+<img src="images/BERT_RoBERTa_DistilBERT_학습_시간_비교.png">
+
+
