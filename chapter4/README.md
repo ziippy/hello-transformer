@@ -81,6 +81,8 @@ BERT를 최적으로 학습하는 것이 핵심
 
 2019년 7월에 Google Research 와 Toyota Technological Institute at Chicago 가 연구해서 발표한 언어 모델
 
+"A Lite BERT for Self-supervised Learning of Language Representations"
+
 BERT 의 모델 사이즈가 크다는 단점을 극복한 언어 모델
 
 모델 사이즈를 줄이는 방법
@@ -104,3 +106,21 @@ Cross-layer Parameter Sharing
 
 <img src="SOP_학습_데이터_예시.png">
 
+### ELECTRA
+
+2020년 5월에 Google Brain 과 스탠퍼드 대학교가 함께 연구해서 발표한 언어 모델
+
+"Efficiently Learning an Encoder that Classifies Token Replacements Accurately"
+
+학습 효율을 개선함으로써 사전 학습 시간을 현저히 줄임
+
+ELECTRA 에서는 MLM 대신 RTD(Replaced Token Detection) 이라는 방법을 사용해서 학습
+
+ELECTRA 를 학습할 때도 Generator 와 Discriminator 가 필요하다.
+
+<img src="ELECTRA의_Generator와_Discriminator_역할.png">
+
+즉, MLM 은 전체 입력 토큰의 15% 에 대해서만 학습 -> 이게 비효율적이라고 생각  
+RTD 에서는 모든 토큰이 학습 대상이 됨 (fake or real) -> 하나의 입력 데이터로 더 많은 학습 가능
+
+<img src="RTD를_통한_언어_모델_학습_효과.png">
