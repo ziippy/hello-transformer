@@ -142,4 +142,22 @@ BERT 와 비교했을 때 파라미터 수도 2배 정도 적고, 속도는 2배
 
 <img src="images/BERT_RoBERTa_DistilBERT_학습_시간_비교.png">
 
+### BigBird
+
+BERT 의 연산량에 가장 큰 영향을 미치는 것이 어텐션이다.
+
+이 어텐션의 연산량을 줄이기 위한 많은 연구가 있었다.
+
+Sparse 어텐션에 대해 이야기 해 보고, BigBird 라고 하는 긴 시퀀스를 위한 트랜스포머에 대해서도 알아보자.
+
+BigBird 에서의 어텐션은
+- 글로벌 어텐션
+- 로컬 어텐션
+- 랜덤 어텐션
+으로 구성된다.
+
+<img src="images/BigBird의_어텐션과_셀프어텐션.png">
+
+<img src="images/BigBird와_RoBERTa의_토큰_길이에_따른_지연_시간.png">
+
 
