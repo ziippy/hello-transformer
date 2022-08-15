@@ -8,7 +8,7 @@ BERT 구조 뒤에 각자 만들고자 하는 모델의 성격에 따라 레이�
 
 BERT 이후에 나오는 트랜스포머 기반의 언어 모델은 거의 모두 사전 학습 후 파인튜닝하는 구조로 이뤄져 있다.
 
-<img src="BERT_모델_전체_구조.png">
+<img src="images/BERT_모델_전체_구조.png">
 
 ### BERT 모델의 입력 이해하기
 
@@ -22,16 +22,16 @@ BERT는 워드피스 포크나이저를 사용한다.
 
 "There is my school and I love this place" 라는 문장에 대한 전체 구조는 다음 그림과 같다.
 
-<img src="BERT_입력에_대한_전체_구조.png">
+<img src="images/BERT_입력에_대한_전체_구조.png">
 
 ### 사전학습은
 - MLM(Masked Language Model) 과 NSP(Next Sentence Prediction) 을 통해 학습한다.
 
-<img src="MLM_학습_과정_요약.png">
+<img src="images/MLM_학습_과정_요약.png">
 
-<img src="NSP_학습_데이터_예시.png">
+<img src="images/NSP_학습_데이터_예시.png">
 
-<img src="BERT_사전_학습_요약.png">
+<img src="images/BERT_사전_학습_요약.png">
 
 ### 텍스트 분류 모델로 파인튜닝하기
 
@@ -53,11 +53,11 @@ BERT는 워드피스 포크나이저를 사용한다.
 
 - 앞에 나온 단어를 이용해서 다음 단어를 맞춰나가는 방식으로 사전 학습을 진행
 
-<img src="GPT를_이용한_언어_모델_학습_방법.png">
+<img src="images/GPT를_이용한_언어_모델_학습_방법.png">
 
-<img src="BERT_vs_GPT.png">
+<img src="images/BERT_vs_GPT.png">
 
-<img src="GPT의_Masked_Self-Attention_에서의_마스킹_방법.png">
+<img src="images/GPT의_Masked_Self-Attention_에서의_마스킹_방법.png">
 
 ### RoBERTa
 
@@ -73,9 +73,9 @@ BERT를 최적으로 학습하는 것이 핵심
 - 토크나이저 변경 
 등의 방법을 이용
 
-<img src="RoBERTa의_Dynamic_Static_마스킹.png">
+<img src="images/RoBERTa의_Dynamic_Static_마스킹.png">
 
-<img src="RoBERTa에서의_NSP_전략.png">
+<img src="images/RoBERTa에서의_NSP_전략.png">
 
 ### ALBERT
 
@@ -93,18 +93,18 @@ Factorized Embedding Parameterization
 - BERT 에서는 임베딩 사이즈를 히든 사이즈와 같게 뒀다. (<BERT_입력에_대한_전체_구조> 참고)
 - 임베딩 사이즈(E) 와 히든 사이즈 (H) 를 굳이 같은 값을 묶을 필요가 없다고 이야기하고 있다.
 
-<img src="ALBERT와_BERT의_임베딩_파라미터_수_계산.png">
+<img src="images/ALBERT와_BERT의_임베딩_파라미터_수_계산.png">
 
 Cross-layer Parameter Sharing
 - BERT 에서는 Self-Attention을 계산해서 H 차원의 결과값을 만들어내는 BertLayer 를 12번 반복한다.
 - 이 때 파라미터를 공유하지 않으므로 같은 구조의 블록을 12개 만든다.
 - ALBERT 에서는 이 구조의 블록을 1개 만들어서 재사용한다. -> 결과적으로 파라미터 공유
 
-<img src="ALBERT와_BERT의_인코더_동작_구조.png">
+<img src="images/ALBERT와_BERT의_인코더_동작_구조.png">
 
 또 하나 짚고 넘어가야 할 부분인 "SOP (Sentence Order Prediction)"
 
-<img src="SOP_학습_데이터_예시.png">
+<img src="images/SOP_학습_데이터_예시.png">
 
 ### ELECTRA
 
@@ -118,9 +118,12 @@ ELECTRA 에서는 MLM 대신 RTD(Replaced Token Detection) 이라는 방법을 �
 
 ELECTRA 를 학습할 때도 Generator 와 Discriminator 가 필요하다.
 
-<img src="ELECTRA의_Generator와_Discriminator_역할.png">
+<img src="images/ELECTRA의_Generator와_Discriminator_역할.png">
 
 즉, MLM 은 전체 입력 토큰의 15% 에 대해서만 학습 -> 이게 비효율적이라고 생각  
 RTD 에서는 모든 토큰이 학습 대상이 됨 (fake or real) -> 하나의 입력 데이터로 더 많은 학습 가능
 
-<img src="RTD를_통한_언어_모델_학습_효과.png">
+<img src="images/RTD를_통한_언어_모델_학습_효과.png">
+
+### DistilBERT
+
