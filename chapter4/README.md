@@ -160,4 +160,34 @@ BigBird 에서의 어텐션은
 
 <img src="images/BigBird와_RoBERTa의_토큰_길이에_따른_지연_시간.png">
 
+### 리포머 (Reformer)
 
+셀프어텐션은 우수한 성능을 보여주지만 연산량이나 메모리 사용량 측면에서는 비효율적이다. 
+
+2020년에 구글에서 이 문제를 해결하기 위해 발표한 논문
+
+Reformer Transformer
+
+<img src="images/기존_트랜스포머_기반의_모델이_갖는_문제점.png">
+
+리포머에서는 위 3가지 문제점을 개선
+
+- LSH (Locally Sensitive Hashing) 어텐션
+
+<img src="images/기존_트랜스포머에서의_어텐션_계산.png">
+
+<img src="images/LSH의_핵심_아이디어.png">
+
+<img src="images/앵귤러_LSH.png">
+
+<img src="images/LSH를_이용한_어텐션_계산하기.png">
+
+<img src="images/청크_단위로_묶어서_어텐션_계산하기.png">
+
+- Reversible 트랜스포머
+
+많은 메모리가 필요한 문제를 해결한 방식
+
+활성화 함수 값을 메모리에 저장하지 않고 계산해서 쓸 수 있는 RevNet을 응용해서 Reversible Transformer 제안함
+
+<img src="images/ResNet과_RevNet의_구조.png">
