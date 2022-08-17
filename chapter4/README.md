@@ -191,3 +191,10 @@ Reformer Transformer
 활성화 함수 값을 메모리에 저장하지 않고 계산해서 쓸 수 있는 RevNet을 응용해서 Reversible Transformer 제안함
 
 <img src="images/ResNet과_RevNet의_구조.png">
+
+### GLUE 데이터셋
+
+General Language Understanding Evaluation
+
+<img src="images/GLUE_데이터셋_정리.png">
+
