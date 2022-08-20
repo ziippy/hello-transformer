@@ -49,7 +49,7 @@ from utils_squad import (read_squad_examples, convert_examples_to_features,
 # We've added it here for automated tests (see examples/test_examples.py file)
 #from utils_squad_evaluate import EVAL_OPTS, main as evaluate_on_squad
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 logger = logging.getLogger(__name__)
 
